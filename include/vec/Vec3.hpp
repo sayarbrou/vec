@@ -3,8 +3,7 @@
 #include <cmath>
 #include <string>
 
-#include "Vec2.hpp"
-#include "Util.hpp"
+//#include "Vec2.hpp"
 
 class Vec3 {
 public:
@@ -13,11 +12,10 @@ public:
     Vec3();
     Vec3(const float);
     Vec3(const float, const float, const float);
-    Vec3(const Vec2, const float);
-    Vec3(const float, const Vec2);
+    //Vec3(const Vec2, const float);
+    //Vec3(const float, const Vec2);
 
     std::string toString();
-    std::string toString(int);
 
     float lengthSquared();
     float length();

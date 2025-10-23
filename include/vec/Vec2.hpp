@@ -4,51 +4,49 @@
 #include <cmath>
 #include <string>
 
-#include "Util.hpp"
-
+template <typename T>
 class Vec2 {
 public:
-    float x, y;
+    T x, y;
 
     Vec2();
-    Vec2(const float);
-    Vec2(const float, const float);
+    Vec2(const T);
+    Vec2(const T, const T);
 
     std::string toString();
-    std::string toString(int);
 
-    float lengthSquared();
-    float length();
+    T lengthSquared();
+    T length();
 
     Vec2 operator+(const Vec2) const;
-    Vec2 operator+(const float) const;
+    Vec2 operator+(const T) const;
     void operator+=(const Vec2);
-    void operator+=(const float);
+    void operator+=(const T);
 
     Vec2 operator-(const Vec2) const;
-    Vec2 operator-(const float) const;
+    Vec2 operator-(const T) const;
     void operator-=(const Vec2);
-    void operator-=(const float);
+    void operator-=(const T);
 
     Vec2 operator*(const Vec2) const;
-    Vec2 operator*(const float) const;
+    Vec2 operator*(const T) const;
     void operator*=(const Vec2);
-    void operator*=(const float);
+    void operator*=(const T);
 
     Vec2 operator/(const Vec2) const;
-    Vec2 operator/(const float) const;
+    Vec2 operator/(const T) const;
     void operator/=(const Vec2);
-    void operator/=(const float);
+    void operator/=(const T);
 
     Vec2 operator-() const;
 
     // non object specific
 
-    static float dot(const Vec2, const Vec2);
-    static float distance(const Vec2, const Vec2);
-    static float distanceSquared(const Vec2, const Vec2);
+    static T dot(const Vec2, const Vec2);
+    static T distance(const Vec2, const Vec2);
+    static T distanceSquared(const Vec2, const Vec2);
     static Vec2 reflect(const Vec2, const Vec2);
-    static Vec2 refract(const Vec2, const Vec2, const float);
+    static Vec2 refract(const Vec2, const Vec2, const T);
     static Vec2 abs(const Vec2);
     static Vec2 step(const Vec2, const Vec2);
     static Vec2 sign(const Vec2);
@@ -56,9 +54,9 @@ public:
 
 // more prototypes
 
-Vec2 operator+(const float, const Vec2);
-Vec2 operator-(const float, const Vec2);
-Vec2 operator*(const float, const Vec2);
-Vec2 operator/(const float, const Vec2);
+Vec2 operator+(const T, const Vec2);
+Vec2 operator-(const T, const Vec2);
+Vec2 operator*(const T, const Vec2);
+Vec2 operator/(const T, const Vec2);
 
 #endif

@@ -3,23 +3,16 @@
 #include <cmath>
 #include <string>
 
-#include "Vec2.hpp"
-#include "Util.hpp"
+//#include "Vec2.hpp"
 
 Vec3::Vec3() { x = y = z = 0.0; }
 Vec3::Vec3(const float val) { x = y = z = val; }
 Vec3::Vec3(const float val1, const float val2, const float val3) { x = val1; y = val2; z = val3; }
-Vec3::Vec3(const Vec2 vec, const float val) { x = vec.x; y = vec.y; z = val; }
-Vec3::Vec3(const float val, const Vec2 vec) { x = val; y = vec.x; z = vec.y; }
+//Vec3::Vec3(const Vec2 vec, const float val) { x = vec.x; y = vec.y; z = val; }
+//Vec3::Vec3(const float val, const Vec2 vec) { x = val; y = vec.x; z = vec.y; }
 
 std::string Vec3::toString() {
     std::string output = "(" + std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z) + ")";
-    return output;
-}
-
-std::string Vec3::toString(int decimals) {
-    std::string output = "(" + Util::trunc(x, decimals) + ", "
-        + Util::trunc(y, decimals) + ", " + Util::trunc(z, decimals) + ")";
     return output;
 }
 
