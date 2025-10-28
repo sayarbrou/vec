@@ -1,4 +1,5 @@
 #ifndef VEC_VEC3_HPP
+#define VEC_VEC3_HPP
 
 #include <cmath>
 #include <string>
